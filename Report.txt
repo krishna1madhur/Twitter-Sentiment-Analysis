@@ -1,0 +1,120 @@
+ONLINE SOURCES:
+https://dev.twitter.com/
+http://stackoverflow.com/
+https://docs.python.org/3/
+http://www.dotnetperls.com/
+
+1. SEARCH API:
+
+Search Term: Flames(This word has 17.2k tweets and is trending in Chicago)
+
+Example Tweets from 'search_output.txt':
+1. Ladd Has 2 Goals, Assist and Blackhawks Beat Flames 4-1: Andrew Ladd had two goals and an assist and Scott Dar... https:\\/\\/t.co\\/6A1IoB2jOE
+2. https:\\/\\/t.co\\/HfkGwNSgzK &gt;&gt; Ladd has 2 goals, assist and Blackhawks beat Flames 4-1 https:\\/\\/t.co\\/UMPgt1uq4W
+3. Ladd Has 2 Goals, Assist and Blackhawks Beat Flames 4-1: Andrew Ladd had two goals and an assist and Scott Dar... https:\\/\\/t.co\\/C8fICCoGkS
+4. #WellingtonHere Ladd Has 2 Goals, Assist and Blackhawks Beat Flames 4-1: Andrew Ladd had two g... https:\\/\\/t.co\\/nArpCd2jJD #WellingtonHere
+5. Then I realize what it is. It\'s him. Something about him makes me feel like I am about to fall. Or turn to liquid. Or burst into flames.\\
+6. #ABCNews Ladd Has 2 Goals, Assist and Blackhawks Beat Flames 4-1: Andrew Ladd had two goals and an assis... https:\\/\\/t.co\\/FcYs9qsWEg #News
+
+2. FREQUENCY API:
+
+30 Most Frequent Terms from 'term_freq.txt'-
+easter 0.0064002741
+happy 0.0049364644
+love 0.0036283792
+get 0.0033169304
+like 0.0028809020
+iheartawards 0.0028341846
+i'm 0.0028030397
+amp 0.0027563224
+go 0.0026628878
+bestfanarmy 0.0025227358
+follow 0.0023981562
+one 0.0021801420
+don't 0.0021334247
+it's 0.0021334247
+day 0.0019465554
+u 0.0019154105
+people 0.0018375483
+harmonizers 0.0017441136
+weather 0.0016818238
+jaibrooks 0.0016506790
+everyone 0.0016195341
+good 0.0015728167
+new 0.0015416719
+know 0.0015260994
+want 0.0014482372
+time 0.0014015199
+see 0.0013859474
+life 0.0013392301
+look 0.0013392301
+you're 0.0013080852
+make 0.0012769403
+please 0.0012613679
+
+Results and Observations- We can observe that,'easter' is one of the most frequent terms as this is easter season. Similarily, we observe 'love' and 'happy' to be among top 3 most frequent terms as it is a festive season.
+
+3. DETERMINE THE SENTIMENT OF EACH TWEET:
+
+In the order of happiest tweet to unhappiest tweet, top 10 happiest and top 10 unhappiest tweets from 'tweet_sentiment.txt'
+
+20.0: We all have that one friend 😂😂😂 #lol #LMAO #comedy #halrious #LMFAO #funny #toofunny #ROFL #sotrue #gay #nohomo #20… https://t.co/PzBVLgTEC5
+12.0: @921thebeat @justinbieber It would be amazing to win  I've been supporting him since 2009 I would love to see him live #Bieber921 x2257
+12.0: Thank you thank you thank you to the best bridesmaids a gal could ever have! Love these girls so… https://t.co/p6M0nxcQ1Q
+12.0: Loved #TheNightManager brilliant from start to finish. More please!! @twhiddleston was fantastic as ever!
+11.0: Thank God. Praise God. Happy Easter. Jesus lives. 🙌🏿
+11.0: RT @Benjamin_Percy: 1/2 Shows like Arrow, Flash, Daredevil are loads of fun. I'm glad they exist as separate but parallel highways of the c…
+11.0: RT @imactuallywes: happy Easter babies ❤️ I love you and I hope you have a really good day. I'll be thinking about u
+11.0: RT @eIlipses: I love when adults are like "if all your friends jumped off a bridge would you jump too?" like I'd jump off a bridge for fun …
+11.0: My awesome sweet husband bought me beautiful Easter flowers thank you Timbo Willman
+11.0: @Harry_Styles goodnight my precious little angel, stay safe and take care! I love you and admire you so much. thank you for everything. x
+
+-12.0: accusing people of being witches- many children- killed abused neglected starved shunned https://t.co/2WrHmYq6RC
+-12.0: RT @Stormzy1: I deleted the tweet of me slewing my mans dead dog. The dog didn't deserve that I'm sorry. But he's a lil racist cunt still
+-12.0: RT @DerekLuh: Don't say shit about shit if u don't know shit..
+-12.0: RT @__DeLay: So he says "on some real I know one of you niggas is plottin on me. I bet its Peter hatin ass mad he don't get hoes" https://t…
+-13.0: RT @CarltonCrying: When you at the same party as your crush and she tweets "Damn, ain't nothing but ugly niggas here." https://t.co/PXrULQ7…
+-13.0: RT @Kevin_Maguire: "Most of the dead and injured are women and children" Murdering bastards https://t.co/vnk56eAhdu
+-13.0: RT @D_Moose15: @ChelbyDale HAHA bad bitch? Keep your fucking mouth shut about what's mine or keep showing your ass. We've all seen it alrea…
+-15.0: RT @SincerelyTumblr: i hate when people say haters are motivators wtf no i cry whenever i find out someone hates me
+-17.0: RT @hacare: Fake democracy, fake constitution ,fake rule of law, fake justice, fake humanitarian aid, fake gov. Fake UN support .. #Libya @…
+-19.0: @Harry_Styles holy fucking shit you did not. Oh my god stop making me love you so fucking much fucking hell man my heart hurts
+
+4. HAPPIEST BREAKING BAD ACTOR:
+
+Decreasing order on the average sentiment score of each actor along with their sentiment scores from 'happiest_actor.txt'
+
+2.11: mrbobodenkirk
+2.0505050505050506: Krystenritter
+1.8181818181818181: quiethandfilms
+1.6666666666666667: CharlesEbaker
+1.62: deanjnorris
+1.5913978494623655: aaronpaul_8
+1.5876288659793814: RjMitte
+1.53: betsy_brandt
+1.35: BryanCranston
+1.309278350515464: DanielMoncada80
+1.288659793814433: LuisMoncada77
+0.0625: mattjonesisdead
+
+Results and Observations-
+1. The actor with name 'mrbobodenkirk' is the happiest breaking bad actor among all the actors present. 
+2. Also, 'mattjonesisdead' is the unhappiest among all the breaking bad actors. 
+3. The actors who tweet using positive words rank higher in the happiness ranking. 
+
+5. HAPPIEST STATE:
+
+Top 5 happiest and top 5 unhappiest states in United States of America along with their sentiment scores from 'happiest_state.txt'
+
+2.5: NM
+2.0833333333333335: KS
+2.0: VA
+2.0: ID
+1.7142857142857142: NJ
+
+-0.3333333333333333: CT
+-0.47058823529411764: OH
+-0.5625: NC
+-0.6666666666666666: MS
+-9.0: IA
+
