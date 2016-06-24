@@ -1,0 +1,70 @@
+INSTRUCTIONS TO RUN THE PROGRAMS:
+
+1. SEARCH API - Fetch_Tweets.py
+
+INPUT 1:
+fetch_tweets.py- Program to fetch tweets which contain the 'term' specified from millions of tweets in twitter database
+RUN 1: 
+$python3 fetch_tweets.py -c fetch_by_terms -term "[your_chosen_term]" > search_output.txt
+OUTPUT 1:
+Retrieves all the tweets that contains the search term.
+
+INPUT 2:
+fetch_tweets.py- Program to fetch tweets of users specified in user_names.txt
+user_names.txt- Please include any active users in this file. This file is present in 'data/usernames.txt'. It has user names of breaking bad actors by default.
+RUN 2:
+$python3 fetch_tweets.py -c fetch_by_user_names -file user_names.txt > breaking_bad_tweets.csv
+OUTPUT 2:
+Retrieves all the tweets of the users specified in the 'user_names.txt' file and writes it to 'breaking_bad_tweets.csv' file. We can restrict this list to 'X' recent tweets. Please include only valid user names.
+
+INPUT 3:
+fetch_tweets.py- Program to fetch tweets from twitter database. This won't ve stopping. We need to stop the execution of the program by using ctrl+c.
+RUN 3:
+$ python3 fetch_tweets.py -c fetch_samples > streaming_output_full.txt
+OUTPUT 3:
+Retrieves the most recent tweets from twitter database which we use for computations in later stages.
+
+2. FREQUENCY API - Frequency.py
+
+INPUT 1: 
+frequency.py- Program to compute term frequency histogram of all tweets in the 'tweet file'. 
+Term frequency = [# of occurrences of the term in all tweets]/[# of occurrences of all terms in all tweets]
+tweet_file- Any file containing tweets. In our case, we can use 'streaming_output_full.txt' as it contains hundreds of tweets.
+stopword_file- This file is present in 'data/stopwords.txt'. It has list of stopwords that have to be excluded in the tweets.  
+RUN 1:
+$ python3 frequency.py <stopword_file> <tweet_file> > term_freq.txt
+OUTPUT 1:
+Computes the frequency of all the words in the tweets and place them in the 'term_freq.txt' file. Example: 'bar 0.1245'
+
+3. DETERMINE THE SENTIMENT OF EACH TWEET - Tweet_sentiment.py
+
+INPUT 1:  
+tweet_sentiment.py- Determines the sentiment of each tweet in the tweet file.
+sentiment_file- The sentiment scores of each word are given in this 'data/AFINN-111.txt'
+tweet_file- This file can be any file containing tweets. In our work flow, we can use 'streaming_output_full.txt'.
+RUN 1:
+python3 tweet_sentiment.py <sentiment_file> <tweet_file> > tweet_sentiment.txt
+OUTPUT 1:
+Stores the sentiments of each tweet in the tweet file in the descending order of their sentiment scores. Example: [top tweet 1 score]: [top tweet 1 text]
+
+4. HAPPIEST BREAKING BAD ACTOR - Happiest_actor.py
+
+INPUT1:
+happiest_actor.py- Determines the happiest actor among all the actors who were specified in the 'breaking_bad_tweets.csv' file.
+sentiment_file- The sentiment scores of each word are given in this 'data/AFINN-111.txt'
+csv_file- We can use 'breaking_bad_tweets.csv' which contains tweets of usernames specified in the 'data/user_names.txt' for computation of most happiest user/actor among them.
+RUN 1:
+$ python3 happiest_actor.py <sentiment_file> <csv_file> > happiest_actor.txt
+OUTPUT 1:
+Stores the sentiment scores of all the breaking bad actors/usernames in descending order in 'happiest_actor.txt'. Example: [actor 1 score]: [actor 1 username]
+
+5. HAPPIEST STATE - Happiest_state.py
+
+INPUT 1:
+happiest_state.py- Determines the happiest state(state with lot of positive tweets) by taking the input of all the tweets. We consider only tweets from United States at this moment.
+sentiment_file- The sentiment scores of each word are given in this 'data/AFINN-111.txt'
+tweet_file- Any file containing tweets. We can use 'streaming_output_full.txt' in our case.
+RUN 1:
+$ python3 happiest_state.py <sentiment_file> <tweet_file> > happiest_state.txt
+OUTPUT 1:
+Ranks all the states in United States in decreasing order of their happiness. Example: [state 1 score]: [state 1 abbreviation]
